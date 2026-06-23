@@ -22,3 +22,7 @@ reference_page_images/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+
+# Generated documents and temp artifacts
+output/
+tmp/

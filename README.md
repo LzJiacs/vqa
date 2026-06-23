@@ -1,161 +1,194 @@
-﻿# VQA-4090 Windows 实验工程（PyTorch）
+# Evidence-Driven VQA
 
-本项目提供可在 **Windows + 单卡 RTX 4090** 上直接运行的完整实验流程：
-- conda 环境创建（CUDA 版 PyTorch）
-- 实验数据集准备（自动生成 sample 文档 VQA 数据）
-- retriever / reranker / answerability 训练
-- 端到端推理与评测
-- wheel + 结果文件完整打包发布
+一个面向真实文档问答的可验证 VQA 项目：先检索证据，再让 VLM 基于证据回答，并在证据不足时拒答。项目重点不是单纯追求更高分，而是把“答案是否可信、是否可追溯”做成可复现实验。
 
-## 1. 一键创建环境（Windows PowerShell）
+本仓库沉淀了完整的工程链路：
+- 文档 OCR 与版面切块
+- 稠密检索与 cross-encoder 重排
+- 基于 Qwen2.5-VL 的证据感知推理
+- answerability / support gate 拒答机制
+- DocVQA、ChartQA 的评测、可视化与消融
+
+## 项目要解决的问题
+
+普通 VLM 在文档图像上经常能“答对”，但很难说明答案到底来自哪里。这个项目的目标是把文档问答从“能回答”推进到“能给证据、能拒答、能审计”。
+
+核心问题有三个：
+- 文档页往往信息密集，VLM 直接全图问答不稳定。
+- 仅有正确率不足以说明系统可靠，尤其是在无答案样本上容易幻觉。
+- 真实业务更需要“证据链 + 拒答策略”，而不是只看单个 benchmark 分数。
+
+## 方法概览
+
+系统采用一个明确的 evidence-first pipeline：
+
+1. `OCR + layout regions`
+   将文档图像转成带位置的文本区域。
+2. `Dense retrieval`
+   用 BGE 编码器从同文档区域中召回候选证据。
+3. `Cross-encoder rerank`
+   对候选证据按问题相关性重排。
+4. `Evidence-aware VLM inference`
+   将问题、文档图像和重排后的证据一起送入 `Qwen2.5-VL-3B-Instruct`。
+5. `Answerability + support gate`
+   在证据不足或答案无法被证据支持时输出拒答。
+
+这条链路的重点是：把“回答”限制在可追溯证据边界内，而不是让模型自由发挥。
+
+## 关键结果
+
+当前最有代表性的结果来自 `2026-04-17` 的 doc-local retrieval + support gate 实验：
+
+| 设置 | DocVQA score | Task acc with abstain | Answerable acc | Unanswerable abstain | Hallucination proxy | Evidence recall@rerank |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| global retrieval | 0.48 | 0.50 | 0.60 | 0.10 | 0.90 | 0.36 |
+| doc-local retrieval | 0.54 | 0.72 | 0.675 | 0.90 | 0.10 | 0.96 |
+| strict support gate | 0.55 | 0.73 | 0.6875 | 0.90 | 0.10 | 0.9067 |
+| numeric support gate | 0.55 | 0.72 | 0.6875 | 0.85 | 0.15 | 0.9067 |
+
+这组结果说明了三件事：
+- 最大提升来自 `doc-local retrieval`。把证据范围限制在当前文档后，证据召回和可靠性明显改善。
+- `reranker` 是必要的。只靠召回无法稳定把最有用的区域送给 VLM。
+- `support gate` 让项目具备了比较清晰的“可验证回答”叙事，而不是单纯的 VLM baseline。
+
+## 真实数据与可视化展示
+
+### 1. DocVQA 真实页面样例
+
+项目直接使用真实文档数据而不是手工玩具样本。下面是仓库中的 DocVQA 页面示例：
+
+![DocVQA sample](docs/assets/docvqa_sample_page.png)
+
+### 2. ChartQA 真实图表示例
+
+除了文档页，项目还覆盖了 ChartQA，用来验证图表理解与数值问答能力：
+
+![ChartQA sample](docs/assets/chartqa_sample.png)
+
+### 3. 证据可视化
+
+下图展示了系统在真实页面上标出的候选证据区域，这也是项目“可解释性”最直观的部分之一：
+
+![Evidence visualization](docs/assets/evidence_visualization_docvqa.png)
+
+### 4. Grounding baselines
+
+这个图回答了一个关键问题：VLM 到底需要图像、文字证据，还是两者都需要。
+
+![Grounding baselines](docs/assets/grounding_baselines_doclocal_docqa_chartqa.png)
+
+实验结论很明确：
+- `image only` 很强，但不可验证。
+- `retrieved text only` 明显不够。
+- `retrieved evidence + image` 在 DocQA 和 ChartQA 上都更稳，说明视觉和证据文本是互补关系。
+
+### 5. Faithfulness / verifiability
+
+这个图把“准确”和“可验证”分开看，是项目叙事里最关键的一张图：
+
+![Faithfulness](docs/assets/faithfulness_supportgate.png)
+
+它说明：即便 image-only 能得到接近的分数，也不能证明答案可由检索证据支持；support gate 则把“回答是否有证据”变成显式约束。
+
+## 项目亮点
+
+### 研究层面
+
+- 把多模态文档问答重新定义为“证据驱动 + 可拒答”的问题。
+- 明确区分 `accuracy` 和 `verifiability`，补上很多 VLM demo 缺少的可靠性视角。
+- 给出一套较完整的 ablation：global vs doc-local、with vs without reranker、strict vs numeric support gate。
+
+### 工程层面
+
+- 所有核心流程都脚本化，能从数据准备一路跑到结果图表。
+- 支持 DocVQA、ChartQA 和 sample 数据三条路径。
+- 评测结果、阈值扫描、grounding baselines、faithfulness 分析都有固定产物输出。
+- 仓库中保留了论文/面试叙事材料，便于复用到展示、汇报或论文草稿。
+
+## 仓库结构
+
+```text
+configs/      实验配置
+data/         本地数据集缓存与转换结果
+docs/         论文叙事、实验报告、展示素材
+experiments/  旧版实验记录与论文图
+outputs/      训练、评测、可视化产物
+scripts/      数据准备、训练、推理、评测、画图脚本
+src/          核心库代码
+```
+
+## 快速开始
+
+### 1. 安装依赖
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+Windows + 4090 环境可直接使用：
 
 ```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ./scripts/setup_win4090.ps1
 ```
 
-环境名默认是 `vqa4090`。
-
-## 2. 一键跑完整实验
+### 2. 跑一个最小样例
 
 ```powershell
 ./scripts/run_full_experiment.ps1
 ```
 
-默认会：
-1. 自动准备 `data/sample` 数据集
-2. 训练 retriever（MiniLM）
-3. 训练 reranker（MiniLM）
-4. 训练 answerability 分类器
-5. 运行推理（默认 mock VLM）
-6. 输出评测指标
+默认会在 sample 数据上完成：
+- retriever 训练
+- reranker 训练
+- answerability 训练
+- 推理与评测
 
-结果目录：`outputs/full_run`
-
-### 可选：接入 Qwen2.5-VL
-
-```powershell
-./scripts/run_full_experiment.ps1 -UseQwen
-```
-
-## 3. 一键打包发布
-
-```powershell
-./scripts/package_release.ps1
-```
-
-打包产物位于：
-- `release/*.whl` / `release/*.tar.gz`
-- `release/environment.lock.yml`
-- `release/outputs/full_run/*`
-- `release/vqa4090_windows_release.zip`
-
-## 4. 手动命令（按步骤）
-
-```powershell
-conda run -n vqa4090 python scripts/prepare_data.py --sample --out data/sample
-conda run -n vqa4090 python scripts/train_retriever.py --qa data/sample/qa.jsonl --regions data/sample/regions.jsonl --model sentence-transformers/all-MiniLM-L6-v2 --output outputs/full_run/retriever
-conda run -n vqa4090 python scripts/train_reranker.py --qa data/sample/qa.jsonl --regions data/sample/regions.jsonl --model cross-encoder/ms-marco-MiniLM-L-6-v2 --output outputs/full_run/reranker
-conda run -n vqa4090 python scripts/train_answerability.py --qa data/sample/qa.jsonl --regions data/sample/regions.jsonl --retriever sentence-transformers/all-MiniLM-L6-v2 --reranker cross-encoder/ms-marco-MiniLM-L-6-v2 --output outputs/full_run/answerability
-conda run -n vqa4090 python scripts/run_infer.py --qa data/sample/qa.jsonl --regions data/sample/regions.jsonl --retriever sentence-transformers/all-MiniLM-L6-v2 --reranker cross-encoder/ms-marco-MiniLM-L-6-v2 --answerability_model outputs/full_run/answerability/model.joblib --output outputs/full_run/predictions.jsonl
-conda run -n vqa4090 python scripts/evaluate.py --pred outputs/full_run/predictions.jsonl --gold data/sample/qa.jsonl
-```
-
-## 5. 真实数据集 + 多组超参数实验（含 TensorBoard）
-
-### 5.1 下载并转换 DocVQA 数据集
-
-```powershell
-E:\anaconda\envs\vqa4090\python.exe scripts/prepare_docvqa_dataset.py --out_root data/docvqa --max_train 1000 --max_test 200 --chunk_words 24 --negative_ratio 0.25
-```
-
-### 5.2 运行超参数 sweep（多次实验）
-
-```powershell
-E:\anaconda\envs\vqa4090\python.exe scripts/run_hparam_sweeps.py --python E:\anaconda\envs\vqa4090\python.exe --config configs/sweep_docvqa.json --train_qa data/docvqa/train/qa.jsonl --train_regions data/docvqa/train/regions.jsonl --test_qa data/docvqa/test/qa.jsonl --test_regions data/docvqa/test/regions.jsonl
-```
-
-也可以直接一键执行：
-
-```powershell
-./scripts/run_docvqa_sweep.ps1
-```
-
-### 5.3 查看日志与可视化
-
-```powershell
-E:\anaconda\envs\vqa4090\python.exe -m tensorboard.main --logdir outputs/sweeps
-```
-
-实验输出包含：
-- 每个 run 的训练日志：`train_retriever.log / train_reranker.log / train_answerability.log / run_infer.log / evaluate.log`
-- 每个 run 的配置与指标：`config.json / metrics.json`
-- 实验汇总：`summary.csv / summary.json`
-- TensorBoard 事件文件：`outputs/sweeps/<exp>/tensorboard/*`
-
-## 6. 显存监控 + 高负载训练（尽量拉满 4090）
-
-### 6.1 运行高负载 sweep（含 GPU 实时监控）
-
-```powershell
-./scripts/run_docvqa_gpu_full.ps1 -Repeat 1
-```
-
-该脚本会：
-1. 启动 `scripts/gpu_monitor.py`（每秒采样一次 `nvidia-smi`）
-2. 跑 `configs/sweep_docvqa_gpu_full.json` 中的高负载参数组
-3. 输出 `gpu_monitor.csv` + 每个 run 全量日志 + TensorBoard
-
-### 6.2 更长时间压满显卡
-
-```powershell
-./scripts/run_docvqa_gpu_full.ps1 -Repeat 3
-```
-
-`Repeat` 越大，持续高负载时间越长。可按需增大 `batch_size` 和 `epochs`（在 `configs/sweep_docvqa_gpu_full.json` 中调整）。
-
-## 7. VLM 版 DocQA + ChartQA（性能提升）
-
-### 7.1 一键跑对比（Mock vs Qwen2.5-VL）
-
-```powershell
-./scripts/run_doc_chartqa_vlm.ps1 -DocMaxTest 60 -ChartMaxTest 60
-```
-
-该流程会自动：
-1. 准备 DocQA 数据：`scripts/prepare_docvqa_dataset.py`
-2. 准备 ChartQA 数据：`scripts/prepare_chartqa_dataset.py`
-3. 分别跑 baseline（mock）与 VLM（Qwen2.5-VL）推理：`scripts/run_vlm_eval.py`
-4. 输出统一评测（DocQA 用 exact，ChartQA 额外 relaxed numeric）：`scripts/evaluate_vqa.py`
-
-### 7.2 结果位置
-
-- `outputs/vlm_bench/<timestamp>/docqa_mock_eval.txt`
-- `outputs/vlm_bench/<timestamp>/docqa_vlm_eval.txt`
-- `outputs/vlm_bench/<timestamp>/chartqa_mock_eval.txt`
-- `outputs/vlm_bench/<timestamp>/chartqa_vlm_eval.txt`
-
-## 8. 4090 项目经历版一键实验（可投论文/可面试讲）
+### 3. 跑项目主实验
 
 ```powershell
 ./scripts/run_project_profile_4090.ps1 -DocTest 80 -ChartTest 80
 ```
 
-流程包括：
-1. DocVQA / ChartQA 数据准备
-2. BGE 检索器训练
-3. Cross-Encoder 重排器训练
-4. 可回答性模型训练 + 阈值自动校准
-5. DocQA 与 ChartQA 的 baseline/vlm 对比评测
-6. 自动生成汇总 `summary.json`
+这个入口会完成：
+- DocVQA / ChartQA 数据准备
+- BGE retriever 训练
+- cross-encoder reranker 训练
+- answerability 校准
+- VLM 推理与评测
+- `summary.json` 与图表产出
 
-附：论文与面试叙事模板见 `docs/paper_interview_story.md`。
+## 推荐查看的结果文件
 
-## 9. 模型下载策略（优先 ModelScope）
+如果你只想快速理解项目，优先看这些文件：
 
-项目已默认实现：**本地路径 > ModelScope > HuggingFace 回退**。  
-如需临时关闭 ModelScope（例如网络慢），可在 PowerShell 中执行：
+- `docs/experiment_report_20260417.md`
+- `docs/paper_interview_story.md`
+- `docs/paper_tables_emnlp.md`
+- `outputs/project_profile_4090/20260417_121829/summary.json`
+- `outputs/project_profile_4090/20260417_121829/inference_grid_doclocal_supportgate/leaderboard.csv`
+- `outputs/project_profile_4090/20260417_121829/faithfulness_supportgate/faithfulness_summary.csv`
 
-```powershell
-$env:VQA_PREFER_MODELSCOPE="0"
-```
+## 更适合面试怎么讲
+
+一句话版本：
+
+> 我做的不是一个“又一个 VQA demo”，而是一套面向真实文档的可验证问答系统：先找证据，再回答，并在证据不够时拒答。
+
+如果要展开，可以按这个顺序讲：
+
+1. 为什么只看 VLM 准确率不够。
+2. 为什么要做检索、重排和证据边界。
+3. 为什么 `doc-local retrieval` 是关键改动。
+4. 为什么 `support gate` 让系统从“会答题”变成“可审计”。
+5. 这套工程怎样被脚本化，能稳定复现实验。
+
+## 当前边界
+
+这个项目现在最强的价值在于：
+- 可验证性和可拒答机制
+- 文档内证据边界
+- 真实数据集上的系统化实验
+
+它还不是一个新的 foundation model，也不是单靠分数碾压通用 VLM 的项目。更准确的定位是：为多模态文档问答提供一层可追溯、可审计的 evidence layer。
