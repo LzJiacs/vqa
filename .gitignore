@@ -1,0 +1,24 @@
+﻿__pycache__/
+*.pyc
+.venv/
+outputs/*
+!outputs/.gitkeep
+
+# Local datasets, model weights, generated artifacts, and release bundles
+data/
+checkpoints/
+dist/
+release/
+reference_page_images/
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/

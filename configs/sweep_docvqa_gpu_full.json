@@ -1,0 +1,37 @@
+{
+  "runs": [
+    {
+      "name": "gpu_fill_a",
+      "retriever_model": "BAAI/bge-base-en-v1.5",
+      "reranker_model": "BAAI/bge-reranker-base",
+      "retriever_epochs": 3,
+      "reranker_epochs": 3,
+      "batch_size": 24,
+      "retrieve_top_k": 12,
+      "rerank_top_k": 5,
+      "abstain_threshold": 0.35
+    },
+    {
+      "name": "gpu_fill_b",
+      "retriever_model": "BAAI/bge-base-en-v1.5",
+      "reranker_model": "BAAI/bge-reranker-base",
+      "retriever_epochs": 4,
+      "reranker_epochs": 3,
+      "batch_size": 32,
+      "retrieve_top_k": 16,
+      "rerank_top_k": 6,
+      "abstain_threshold": 0.30
+    },
+    {
+      "name": "gpu_fill_c",
+      "retriever_model": "BAAI/bge-large-en-v1.5",
+      "reranker_model": "BAAI/bge-reranker-base",
+      "retriever_epochs": 2,
+      "reranker_epochs": 2,
+      "batch_size": 16,
+      "retrieve_top_k": 16,
+      "rerank_top_k": 8,
+      "abstain_threshold": 0.40
+    }
+  ]
+}

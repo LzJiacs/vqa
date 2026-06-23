@@ -1,0 +1,9 @@
+# Ablation Tables for EMNLP-Style Draft
+
+| variant | score | task_acc | ans_acc | unans_abstain | halluc_proxy | ev_recall_rerank | abstain | best_tag |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| global retrieval | 0.48 | 0.5 | 0.6 | 0.1 | 0.9 | 0.36 | 0.07 | rt12_rk8_ev5x320_th0p08_global |
+| doc-local retrieval | 0.54 | 0.72 | 0.675 | 0.9 | 0.1 | 0.96 | 0.23 | rt12_rk8_ev5x320_th0p24 |
+| no reranker | 0.39 | 0.57 | 0.4875 | 0.9 | 0.1 | 0.96 | 0.42 | rt12_rk8_ev5x320_th0p08_norerank |
+| strict support gate | 0.55 | 0.73 | 0.6875 | 0.9 | 0.1 | 0.9067 | 0.3 | rt8_rk5_ev5x320_th0p08_support-strict |
+| numeric support gate | 0.55 | 0.72 | 0.6875 | 0.85 | 0.15 | 0.9067 | 0.25 | rt8_rk5_ev5x320_th0p08_support-numeric |

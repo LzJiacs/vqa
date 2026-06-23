@@ -1,0 +1,532 @@
+--- page 1 ---
+华东师范大学博士学位论文
+参考文献
+[1]
+国务院.教育强国建设规划纲要（2024－2035年）[EB/OL].2025.
+[2]
+教育部等九部门关于加快推进教育数字化的意见[叮]．中国教育信息化，
+2025, 31(04): 3-8.
+[3]
+袁振国.教育数字化转型：转什么，怎么转[川].华东师范大学学报（教育科
+学版),2023,41(03):1-11.
+[4]
+祝智庭,胡姣.教育数字化转型的实践逻辑与发展机遇[川]．电化教育研究,
+2022, 43(01): 5-15.
+[5]  I
+Flanders N A. Teacher influence, pupil attitudes, and achievement: Ned a. flan-
+ders: number 12[M]. US Department of Health, Education, and Welfare, Office
+of Education, 1965.
+[6]
+崔允义郭．论课堂观察LICC范式：一种专业的听评课[J].教育研究,2012，
+33(05): 79-83.
+[7]
+刘清堂,何皓怡,吴林静,等.基于人工智能的课堂教学行为分析方法及其应
+用[J].中国电化教育，2019(09):13-21.
+[8]
+教育展望，2021,50(12):55-65.
+[9]
+ Jia L, Sun H, Jiang J, et al. Enhanced speaker-turn aware hierarchical model for
+cations, 2025: 129047.
+[10] Attia A, Demszky D, Liu J, et al. From weak labels to strong results: Utiliz-
+ing 5,0oo hours of noisy classroom transcripts with minimal accurate data[C].
+Interspeech 2025.ISCA,2025: 3678-3682.
+[11]
+Shapiro B R, Metts E C, Zhao E. The interaction geography slicer: Designing ex-
+ploratory spatial data visualization tools for teachers’ reflective practice[C]. CHI
+  s  o     s e
+Systems. New York, NY, USA: Association for Computing Machinery, 2025.
+125
+--- page 2 ---
+华东师范大学博士学位论文
+[12]杨晓哲,王晴晴,王若昕．生成式人工智能的有限能力与教育变革[]]．全球
+教育展望,2023,52(06):3-12.
+[13]杨晓哲,王晴晴.以ChatGPT为代表的人工智能对教育的影响[J].中国信息
+技术教育,2023(08):4-8.
+[14]杨宗凯,王俊,吴砥,等.ChatGPT/生成式人工智能对教育的影响探析及应对
+策略[J].华东师范大学学报（教育科学版),2023,41(07):26-35.
+[15]卢宇,余京蕾,陈鹏鹤,等.生成式人工智能的教育应用与展望
+—以Chat-
+GPT系统为例[刀].中国远程教育，2023,43(04):24-31+51.
+[16]  Rabiner L.  A tutorial on hidden markov models and selected applications in
+speech recognition[J]. Proceedings of the IEEE, 1989, 77(2): 257-286.
+[17]  Jelinek F. Statistical methods for speech recognition[M]. MIT press, 1998.
+[18]  Deshmukh A M. Comparison of hidden markov model and recurrent neural net-
+work in automatic speech recognition[J]. European Journal of Engineering and
+Technology Research, 2020, 5(8): 958-965.
+[19] Povey D, Peddinti V, Galvez D, et al. Purely sequence-trained neural networks
+for asr based on lattice-free mmi.[C]. Interspeech. 2016: 2751-2755.
+[20]S
+ Senior A, Heigold G, Bacchiani M, et al. Gmm-free dnn acoustic model training
+[C]. 2014 IEEE International Conference on Acoustics, Speech and Signal Pro-
+cessing (ICASSP). 2014: 5602-5606.
+[21]Hannun A Y, Maas A L, Jurafsky D, et al. First-pass large vocabulary continuous
+speech recognition using bi-directional recurrent dnns[Z]. 2014.
+[22] Tuske Z, Golik P, Schluiter R, et al. Acoustic modeling with deep neural networks
+using raw time signal for lvcsr[C]. 2014: 890-894.
+[23]
+Breiman L, Friedman J, Olshen R A, et al. Classification and regression trees
+[M]. Chapman and Hall/CRC, 2017.
+[24]  Young S J, Woodland P C. The use of state tying in continuous speech recognition
+[C]. Proc. Eurospeech 1993. 1993: 2203-2206.
+[25]Sainath T N, Weiss R J, Wilson K W, et al. Speaker location and microphone
+126
+--- page 3 ---
+华东师范大学博士学位论文
+spacing invariant acoustic modeling from raw multichannel waveforms[C]. 2015
+IEEE Workshop on Automatic Speech Recognition and Understanding (ASRU).
+IEEE, 2015: 30-36.
+[26]杨健,孙浏,张丽芳.低资源语言自动语音识别中的数据处理与数据增强综
+述[J.计算机科学,2025,52(08):86-99.
+[27] Hsu W N, Sriram A, Baevski A, et al. Robust wav2vec 2.0: Analyzing domain
+shift in self-supervised pre-training[Z]. 2021.
+[28]  Radford A, Kim J W, Xu T, et al. Robust speech recognition via large-scale weak
+supervision[C]. ICML'23: Proceedings of the 40th International Conference on
+Machine Learning. Honolulu, Hawaii, USA: JMLR.org, 2023.
+[29]  Junczys-Dowmunt M, Grundkiewicz R, Guha S, et al. Approaching neural gram-
+matical error correction as a low-resource machine translation task[C]. Walker M,
+Ji H, Stent A. Proceedings of the 2018 Conference of the North American Chap-
+ter of the Association for Computational Linguistics: Human Language Tech-
+nologies, Volume 1 (Long Papers). New Orleans, Louisiana: Association for
+ComputationalLinguistics,2018: 595-606.
+[30]  Ren H, Yang L, Xun E. A sequence to sequence learning for chinese grammatical
+error correction[C]. Zhang M, Ng V, Zhao D, et al. Natural Language Processing
+and Chinese Computing. Cham: Springer International Publishing, 2018: 401-
+410.
+[31]  Malmi E, Krause S, Rothe S, et al. Encode, tag, realize: High-precision text edit-
+ing[C]. Inui K, Jiang J, Ng V, et al. Proceedings of the 2019 Conference on Em-
+pirical Methods in Natural Language Processing and the 9th International Joint
+Conference on Natural Language Processing (EMNLP-IJCNLP). Hong Kong,
+China: Association for Computational Linguistics, 2019: 5054-5065.
+[32]  Omelianchuk K, Atrasevych V, Chernodub A, et al. GECToR - grammatical
+error correction: Tag, not rewrite[C]. Burstein J, Kochmar E, Leacock C, et al.
+Proceedings of the Fifteenth Workshop on Innovative Use of NLP for Building
+127
+--- page 4 ---
+华东师范大学博士学位论文
+Educational Applications. Seattle, WA, USA → Online: Association for Com-
+putational Linguistics, 2020: 163-170.
+[33]Li W, Wang H.  Detection-correction structure via general language model for
+grammatical error correction[C]. Ku L W, Martins A, Srikumar V. Proceedings
+of the 62nd Annual Meeting of the Association for Computational Linguistics
+(Volume 1: Long Papers). Bangkok, Thailand: Association for Computational
+Linguistics, 2024: 1748-1763.
+linguistic knowledge fusion[C]. Natural Language Processing and Chinese Com-
+puting: 14th National CCF Conference, NLPCC 2025, Urumqi, China, August
+7-9, 2025, Proceedings, Part I1. Berlin, Heidelberg: Springer-Verlag, 2025: 222-
+235.
+[35]  Zhang Y, Li Z, Bao Z, et al. MuCGEC: a multi-reference multi-source evalua-
+tion dataset for Chinese grammatical error correction[C]. Proceedings ofthe 2022
+Conference of the North American Chapter of the Association for Computational
+Linguistics: Human Language Technologies. Seattle, United States: Association
+for Computational Linguistics, 2022: 3118-3130.
+[36]  Z
+ Zhang S, Huang H, Liu J, et al. Spelling error correction with soft-masked BERT
+[C]. Jurafsky D, Chai J, Schluter N, et al. Proceedings of the 58th Annual Meet-
+ing of the Association for Computational Linguistics. Online: Association for
+ComputationalLinguistics,2020: 882-890.
+[37]  Deng J, Chen C, Hou C, et al. InstructGEC: Enhancing unsupervised grammatical
+error correction with instruction tuning[C]. Rambow O, Wanner L, Apidianaki M,
+et al. Proceedings of the 31st International Conference on Computational Lin-
+guistics. Abu Dhabi, UAE: Association for Computational Linguistics, 2025:
+110-122.
+[38]   Li S, Li J, Cao Y.  Automatic post-editing of speech recognition system output
+using large language models[C]. Morishima A, Li G, Ishikawa Y, et al. Database
+128
+--- page 5 ---
+华东师范大学博士学位论文
+Systems for Advanced Applications. DASFAA 2024 International Workshops.
+Singapore: Springer Nature Singapore, 2025: 178-186.
+guided optimization training[C]. Sun M, Liang J, Han X, et al. Chinese Compu-
+tational Linguistics. Singapore: Springer Nature Singapore, 2025: 522-539.
+[40] Wu H, Wang W, Wan Y, et al. Chatgpt or grammarly? evaluating chatgpt on
+grammatical error correction benchmark[Z]. 2023.
+[41] Fang T, Yang S, Lan K, et al. Is chatgpt a highly fluent grammatical error cor-
+rection system? a comprehensive evaluation[Z]. 2023.
+[42] Ma R, Qian M, Manakul P, et al. Can generative large language models perform
+asr error correction?[Z]. 2023.
+[43]  Asano Y, Hassan S, Sharma P, et al. Contextual asr error handling with llms
+augmentation for goal-oriented conversational ai[Z]. 2025.
+[44] Everson K, Gu Y, Yang H, et al. Towards asr robust spoken language understand-
+ing through in-context learning with word confusion networks[C]. ICASSP 2024
+- 2024 IEEE International Conference on Acoustics, Speech and Signal Process-
+ing (ICASSP). 2024: 12856-12860.
+[45]   CHEN C, Hu Y, Yang C H H, et al. Hyporadise: An open baseline for generative
+speech recognition with large language models[C]. Oh A, Naumann T, Glober-
+son A, et al. Advances in Neural Information Processing Systems: volume 36
+Curran Ass0ciates, Inc., 2023: 31665-31688.
+[46] Hu Y, Chen C, Qin C, et al. Listen again and choose the right answer: A
+Ku L W, Martins A, Srikumar V. Findings of the Association for Computational
+Linguistics: ACL 2024. Bangkok, Thailand: Association for Computational Lin-
+guistics, 2024: 666-679.
+model and multilingual 1-best hypotheses[C]. 2024: 1315-1319.
+129
+--- page 6 ---
+华东师范大学博士学位论文
+[48]方海光,高辰柱,陈佳.改进型弗兰德斯互动分析系统及其应用[J]．中国电
+化教育，2012(10):109-113
+[49] Howe C, Abedin M. Classroom dialogue: A systematic review across four
+decades of research[J]. Cambridge journal of education, 2013, 43(3): 325-356.
+]
+1008节课堂视频的智能分析[J].教育发展研究,2024,43(Z2):59-66.
+[51]张光陆.探究式交谈对学生深度学习的影响：基于课堂话语分析[J].全球教
+育展望，2021,50(05):3-14.
+[52]欧阳嘉煜,汪琼．IRF课堂话语结构研究述评[J]．全球教育展望,2021,50
+(05): 15-28.
+[53]  Mikolov T, Chen K, Corrado G, et al. Efficient estimation of word representations
+in vector space[J]. arXiv preprint arXiv:1301.3781, 2013.
+[54]  Cortes C, Vapnik V.  Support-vector networks[J].  Machine Learning, 1995, 20
+(3): 273-297.
+[55] Lewis D.  Naive bayes at forty:  The independence assumption in information
+retrieval[C]. ECML. 1998.
+[56] Quinlan J R. Induction of decision trees[J]. Machine Learning, 1986, 1(1): 81-
+106.
+[57] Wang Z, Pan X, Miller K F, et al. Automatic classification of activities in class-
+room discourse[J]. Computers & Education, 2014, 78: 115-123.
+[58] Xu L, He X, Zhang J, et al. Automatic classification of discourse in chinese
+classroom based on multi-feature fusion[C]. 2019 International Conference on
+Computer, Information and Telecommunication Systems (CITS). IEEE, 2019:
+1-5.
+[59] Lei S, Li J, Song Y, et al. Leveraging neural network-based model for context
+classification of classroom dialogue text[C]. Technology in Education. Innova-
+tions for Online Teaching and Learning: 5th International Conference, ICTE
+2020, Macau, China, August 19-22, 2020, Revised Selected Papers 5. Springer,
+130
+--- page 7 ---
+华东师范大学博士学位论文
+2020: 323-336.
+[60] He Z, Tavabi L, Lerman K, et al. Speaker turn modeling for dialogue act classi-
+fication[J]. arXiv preprint arXiv:2109.05056, 2021.
+[61] Zhao G, Yi J, Chu J, et al. Design and implementation of the teacher-student dia-
+logue automatic speech recognition tool based on classroom verbal characteristics
+[C]. Proceedings of the 14th International Conference on Education Technology
+and Computers. 2022: 503-5081
+[62]  Su Z, Zhou Q.  Speaker clustering in textual dialogue with pairwise utterance
+relation and cross-corpus dialogue act supervision[C]. Proceedings of the 29th
+International Conference on Computational Linguistics. 2022: 734-744.
+[63] Shang G, Tixier A J P, Vazirgiannis M, et al. Speaker-change aware crf for dia-
+logue act classification[Z]. 2023.
+[64] Devlin J, Chang M W, Lee K, et al. Bert: Pre-training of deep bidirectional
+transformers for language understanding[C]. Proceedings of the 2019 conference
+of the North American chapter of the association for computational linguistics:
+human language technologies, volume 1 (long and short papers). 2019: 4171-
+4186.
+[65]  Suresh A, Jacobs J, Lai V, et al. Using transformers to provide teachers with
+personalized feedback on their classroom discourse: The talkmoves application
+[J]. arXiv preprint arXiv:2105.07949, 2021.
+[66]  Mezza S, Wobcke W, Blair A. A multi-dimensional, cross-domain and hierarchy-
+aware neural architecture for iso-standard dialogue act tagging[C]. Proceedings
+of the 29th International Conference on Computational Linguistics. 2022: 542-
+552.
+[67]杨晓哲,王晴晴,蒋佳龙.基于人工智能的课堂师生对话分析：IRE 的自动
+分类与分水平构建[J].电化教育研究,2023,44(10):79-86
+[68]胡艺龄,汪沁婵,吴,等.语义、语用“双管齐下”：优质信息技术课堂互
+动话语自动化分析及特征发现[J].现代远距离教育,2025(01):77-87.
+131
+--- page 8 ---
+华东师范大学博士学位论文
+[69]   Achiam J, Adler S, Agarwal S, et al. Gpt-4 technical report[J]. arXiv preprint
+arXiv:2303.08774, 2023.
+[70]Long Y, Luo H, Zhang Y. Evaluating large language models in analysing class-
+room dialogue[J]. npj Science of Learning, 2024, 9(1): 60)
+[71] Kasneci E, SeBler K, Kuchemann S, et al. Chatgpt for good? on opportunities and
+challenges of large language models for education[J]. Learning and individual
+differences, 2023, 103: 102274.
+[72] Zhang Z, Zhang-Li D, Yu J, et al. Simulating classroom education with llm-
+empowered agents[J]. arXiv preprint arXiv:2406.19226, 2024.
+n ss s-po s      s  ]
+[J]. arXiv preprint arXiv:2307.11388, 2023.
+[74]  Shen Y, He P, Liu H, et al. Can multimodal llms see science instruction? bench-
+marking pedagogical reasoning in k-12 classroom videos[Z]. 2026.
+[75]  Ahtisham B, Vanacore K, Zhou Z, et al. Llm reasoning predicts when models are
+right: Evidence from coding classroom discourse[Z]. 2026.
+[76]   Ngoon T J, Sushil S, Stewart A E, et al. Classinsight: Designing conversation
+support tools to visualize classroom discussion for personalized teacher profes-
+sional development[C]. Proceedings of the CHI Conference on Human Factors
+in Computing Systems. 2024: 1-15.
+[77] Blanchard N, D'Mello S, Olney A M, et al. Automatic classification ofquestion &
+answer discourse segments from teacher's speech in classrooms.[J]. International
+Educational Data Mining Society, 2015.
+[78]  Sinclair J M, Coulthard M, et al. Towards an analysis of discourse: The english
+used by teachers and pupils[M]. Oxford University Press, USA, 1975.
+[79]   Mehan H. Learning lessons: Social organization in the classroom[M]. Harvard
+University Press, 1979.
+[80]  Ngoc Anh B, Tung Son N, Truong Lam P, et al. A computer-vision based appli-
+132
+--- page 9 ---
+华东师范大学博士学位论文
+cation for student behavior monitoring in classroom[]. Applied Sciences, 2019,
+9(22): 4729.
+[81]Cai T, He C, Xiong Y. Enhancing teacher classroom behavior descriptions: A
+spatio-temporal graph-based method for video captioning[C]. ICASSP 2025 -
+2025 IEEE International Conference on Acoustics, Speech and Signal Processing
+(ICASSP). 2025: 1-5.
+[82]  Sun B, Wu Y, Zhao K, et al. Student class behavior dataset: a video dataset for
+recognizing, detecting, and captioning students ′ behaviors in classroom scenes
+[J]. Neural Computing and Applications, 2021, 33(14): 8335-8354.
+[83]  Shapiro B R, Hall R P, Owens D A. Developing & using interaction geography in
+2017, 12(4): 377-399.
+[84]  Martinez-Maldonado R, Mangaroska K, Schulte J, et al. Teacher tracking with
+integrity: What indoor positioning can reveal about instructional proxemics[J]
+Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Tech-
+nologies, 2020, 4(1): 1-27.
+ g   o o    ne r o   z  8]
+framework for student behavior analysis[C]. Thirty-Eighth AAAI Conference on
+Artificial Intelligence, AAAI 2024, February 20-27, 2024, Vancouver, Canada.
+2024: 23241-23249.
+[86]  Blikstein P.  Multimodal learning analytics[C]. Proceedings of the third interna-
+tional conference on learning analytics and knowledge. 2013: 102-106.
+[87] Di Mitri D, Schneider J, Specht M, et al. From signals to knowledge: A concep-
+tual model for multimodal learning analytics[J]. Journal of Computer Assisted
+Learning,2018, 34(4): 338-349
+[88]   Worsley M. Multimodal learning analytics as a tool for bridging learning theory
+and complex learning behaviors[C]. Proceedings of the 2014 ACM workshop on
+Multimodal Learning Analytics Workshop and Grand Challenge. 2014: 1-4.
+133
+--- page 10 ---
+华东师范大学博士学位论文
+[89] Zheng Q, Chen Z, Wang M, et al. Automated multimode teaching behavior anal-
+ysis: A pipeline-based event segmentation and description[J]. IEEE Transactions
+on Learning Technologies, 2024, 17: 1677-1693.
+[90] Ouhaichi H, Spikol D, Vogel B. Research trends in multimodal learning analyt-
+ics: A systematic mapping study[J]. Computers and Education: Artificial Intel-
+ligence, 2023, 4: 100136.
+[91]S
+Sharma K, Giannakos M. Multimodal data capabilities for learning: What can
+multimodal data tell us about learning?[J]. British Journal of Educational Tech-
+nology, 2020, 51(5): 1450-1484.
+[92]  Giannakos M, Cukurova M. The role of learning theory in multimodal learning
+analytics[J]. British Journal of Educational Technology, 2023, 54(5): 1246-1267.
+[93]  Martinez-Maldonado R, Echeverria V, Mangaroska K, et al. Moodoo the tracker:
+Spatial classroom analytics for characterising teachers ′ pedagogical approaches
+[J].  International Journal of Artificial Intelligence in Education, 2022, 32(4):
+1025-1051.
+[94] Moskowitz G. Interaction analysis—a new modern language for supervisors[J]-
+Foreign language annals, 1971, 5(2): 211-221.
+[95]  Amidon E J, Hunter E. Verbal interaction in the classroom: The verbal interaction
+category system[M]. Merrill, 1967.
+[96]  Stigler J W.  The timss videotape classroom study:  Methods and preliminary
+findings[M]. National Center for Education Statistics, 1996.
+[97]顾小清,王炜.支持教师专业发展的课堂分析技术新探索[.中国电化教育,
+2004(07): 18-21.
+[98]  Jun Y, Huanghai O. St analysis of classroom teaching[C]. 2011 6th International
+Conference on Computer Science & Education (ICCSE). IEEE, 2011: 136-140)
+[99] Jia L, Sun H, Wei Y, et al. Epic: Error pattern informed correction for class-
+room asr with limited labeled data[C]. ICASSP 2025 - 2025 IEEE International
+Conference on Acoustics, Speech and Signal Processing (ICASSP). 2025: 1-5.
+134
+--- page 11 ---
+华东师范大学博士学位论文
+[100] Eyben F, Scherer K R, Schuller B W, et al. The geneva minimalistic acous-
+tic parameter set (gemaps) for voice research and affective computing[J]. IEEE
+transactions on affective computing, 2015, 7(2): 190-202.
+[101] Gupta S, Kumar P, Tekchandani R. A multimodal facial cues based engagement
+detection system in e-learning context using deep learning approach[J]. Multi-
+media Tools and Applications, 2023, 82(18): 28589-28615.
+[102] Liu Z, Zhu Z, Zhu L, et al. Classmeta: Designing interactive virtual classmate
+to promote vr classroom participation[C]. Proceedings of the CHI Conference on
+Human Factors in Computing Systems. 2024: 1-17.
+[103] Bueno I, Hou R, Buhler B, et al. Exploring automated recognition of instructional
+activity and discourse from multimodal classroom data[Z]. 2025.
+[104] Hou R, Fuitterer T, Buhler B, et al. Automated assessment of encouragement and
+warmth in classrooms leveraging multimodal emotional features and chatgpt[M].
+Springer Nature Switzerland, 2024: 60-74.
+[105] Davalos E, Zhang Y, Jain S, et al. Designing gaze analytics for ela instruction: A
+user-centered dashboard with conversational ai support[Z]. 2025.
+[106] Reddig J M, Arora A, MacLellan C J. Generating in-context, personalized feed-
+back for intelligent tutors with large language models[J]. International Journal of
+Artificial Intelligence in Education, 2025: 1-42.
+[107] Zhang X, Zhang C, Sun J, et al. Eduplanner: Llm-based multi-agent systems for
+customized and intelligent instructional design[J]. IEEE Transactions on Learn-
+ing Technologies, 2025.
+[108] Rabiner L R, Juang B. A tutorial on hidden markov models[J]. IEEE ASSP
+Magazine, 1986, 3(1): 4-16.
+[109] Hinton G, Deng L, Yu D, et al. Deep neural networks for acoustic modeling in
+speech recognition: The shared views of four research groups[J]. IEEE Signal
+processing magazine, 2012, 29(6): 82-97.
+[110] Graves A, Fernandez S, Gomez F, et al.  Connectionist temporal classifica-
+135
+--- page 12 ---
+华东师范大学博士学位论文
+tion: labelling unsegmented sequence data with recurrent neural networks[C].
+Proceedings of the 23rd international conference on Machine learning. 2006:
+369-376.
+[111] Chan W, Jaitly N, Le Q, et al. Listen, attend and spell: A neural network for
+large vocabulary conversational speech recognition[C]. 2016 IEEE international
+conference on acoustics, speech and signal processing (ICASSP). IEEE, 2016:
+4960-4964.
+[112] Graves A. Sequence transduction with recurrent neural networks[J].  arXiv
+preprint arXiv:1211.3711, 2012.
+[113] Baevski A, Zhou Y, Mohamed A, et al. wav2vec 2.0: A framework for self-
+supervised learning of speech representations[]. Advances in neural information
+processing systems, 2020, 33: 12449-12460.
+[114] Hsu W N, Bolte B, Tsai Y H H, et al. Hubert: Self-supervised speech represen-
+tation learning by masked prediction of hidden units[J]. IEEE/ACM transactions
+on audio, speech, and language processing, 2021, 29: 3451-3460.
+[115] Radford A, Kim J W, Xu T, et al. Robust speech recognition via large-scale weak
+supervision[C]. International conference on machine learning. PMLR, 2023:
+28492-28518.
+[116] Sutskever I, Vinyals O, Le Q V. Sequence to sequence learning with neural net-
+works[J]. Advances in neural information processing systems, 2014, 27.
+[117] Katsumata S, Komachi M. Stronger baselines for grammatical error correction
+using a pretrained encoder-decoder model[C]. Proceedings of the 1st Conference
+of the Asia-Pacific Chapter of the Association for Computational Linguistics and
+the 10th International Joint Conference on Natural Language Processing. 2020:
+827-832.
+[118] Vaswani A, Shazeer N, Parmar N, et al. Attention is all you need[]. Advances
+in neural information processing systems, 2017, 30.
+[119] Watanabe S, Hori T, Kim S, et al. Hybrid ctc/attention architecture for end-to-
+136
+--- page 13 ---
+华东师范大学博士学位论文
+end speech recognition[J]. IEEE Journal of Selected Topics in Signal Processing,
+2017, 11(8): 1240-1253.
+[120]  Kim  Y.  Convolutional neural networks for sentence classification[J].  arXiv
+preprint arXiv:1408.5882,2014.
+[121] Wehrmann J, Cerri R, Barros R. Hierarchical multi-label classification networks
+[C]. International conference on machine learning. PMLR, 2018: 5075-5084.
+[122]  DeepSeek-A1. Deepseek llm: Scaling open-source language models with longter-
+mism[Z]. 2024.
+[123] Bai J, Bai S, Chu Y, et al. Qwen technical report[Z]. 2023.
+[124] Zhang Y, Wang M, Li Q, et al. Pushing the limit of llm capacity for text classifi-
+cation[C]. Companion Proceedings of the ACM on Web Conference 2025. 2025:
+1524-1528.
+[125] Dale M E, Godley A J, Capello S A, et al. Toward the automated analysis of
+teacher talk in secondary ela classrooms[J]. Teaching and Teacher Education,
+2022,110: 103584.
+proving automatic speech recognition performance over classroom environments
+with limited data[C]. Rodrigo M M, Matsuda N, Cristea A I, et al. Artificial Intel-
+ligence in Education. Cham: Springer International Publishing, 2022: 269-280.
+[127] Bain M, Huh J, Han T, et al. Whisperx: Time-accurate speech transcription of
+long-form audio[J]. INTERSPEECH 2023, 2023.
+[128] Wu H, Zhang S, Zhang Y, et al. Rethinking masked language modeling fo1
+Chinese spelling correction[C]. Rogers A, Boyd-Graber J, Okazaki N. Proceed-
+ings of the 61st Annual Meeting of the Association for Computational Linguistics
+(Volume 1: Long Papers). Toronto, Canada: Association for Computational Lin-
+guistics, 2023: 10743-10756.
+[129] Wang D, Song Y, Li J, et al. A hybrid approach to automatic corpus generation for
+Chinese spelling check[C]. Riloff E, Chiang D, Hockenmaier J, et al. Proceed-
+137
+--- page 14 ---
+华东师范大学博士学位论文
+ings of the 2018 Conference on Empirical Methods in Natural Language Pro-
+cessing. Brussels, Belgium: Association for Computational Linguistics, 2018:
+2517-2527.
+[130] Cui Y, Che W, Liu T, et al. Revisiting pre-trained models for chinese natural lan-
+guage processing[C]. Findings of the Association for Computational Linguistics:
+EMNLP 2020. Association for Computational Linguistics, 2020.
+[131] Guo Q, Wang R, Guo J, et al. Connecting large language models with evo-
+lutionary algorithms yields powerful prompt optimizers[J]. arXiv preprint
+arXiv:2309.08532, 2023.
+[132] Suresh A, Sumner T, Jacobs J, et al. Automating analysis and feedback to im-
+prove mathematics teachers’ classroom discourse[C]. Proceedings of the AAAI
+conference on artificial intelligence: volume 33. 2019: 9721-9728.
+[133] Michaels S, O' Connor C, Resnick L B. Deliberative discourse idealized and real-
+ized: Accountable talk in the classroom and in civic life[J]. Studies in philosophy
+and education, 2008, 27: 283-297.
+[134] Stolcke A, Ries K, Coccaro N, et al. Dialogue act modeling for automatic tagging
+(3): 339-374.
+[135] Zimmermann M. Joint segmentation and classification of dialog acts using con-
+ditional random fields[C]. Tenth Annual Conference of the International Speech
+CommunicationAssociation.2o09.
+[136] Lee J Y, Dernoncourt F. Sequential short-text classification with recurrent and
+convolutional neural networks[C]. Knight K, Nenkova A, Rambow O. Proceed-
+ings of the 2016 Conference of the North American Chapter of the Association
+for Computational Linguistics: Human Language Technologies. San Diego, Cal-
+ifornia: Association for Computational Linguistics, 2016: 515-520.
+[137] Ortega D, Vu N T. Neural-based context representation learning for dialog act
+classification[C]. Jokinen K, Stede M, DeVault D, et al. Proceedings of the 18th
+138
+--- page 15 ---
+华东师范大学博士学位论文
+Annual SIGdial Meeting on Discourse and Dialogue. Saarbricken, Germany:
+Association for Computational Linguistics, 2017: 247-252.
+[138] Qin L, Che W, Li Y, et al. Dcr-net: A deep co-interactive relation network for
+joint dialog act recognition and sentiment classification[C]. Proceedings of the
+AAAI conference on artificial intelligence: volume 34. 2020: 8665-8672.
+[139] Qin L, Li Z, Che W, et al. Co-gat: A co-interactive graph attention network for
+joint dialog act recognition and sentiment classification[C]. Proceedings of the
+AAAI conference on artificial intelligence: volume 35. 2021: 13709-13717.
+[140] Kumar H, Agarwal A, Dasgupta R, et al. Dialogue act sequence labeling using
+hierarchical encoder with crf[C]. Proceedings of the aaai conference on artificial
+intelligence: volume 32. 2018.
+[141] Shang G, Tixier A, Vazirgiannis M, et al. Speaker-change aware CRF for di-
+alogue act classification[C]. Scott D, Bel N, Zong C. Proceedings of the 28th
+International Conference on Computational Linguistics. Barcelona, Spain (On-
+line): International Committee on Computational Linguistics, 2020: 450-464.
+[142] Yang X, Wang Q, Jiang J. Analysis of classroom teacher-student dialogue based
+on artificial intelligence: Automatic classification and sub-level construction of
+ire[J]. E-Educ. Res, 2023,44: 79-86.
+[143] McHugh M. Interrater reliability: The kappa statistic[J].  Biochemia medica :
+casopis Hrvatskoga drustva medicinskih biokemicara / HDMB, 2012, 22: 276-
+82.
+[144] Liu Y, Ott M, Goyal N, et al. Roberta: A robustly optimized bert pretraining
+approach[Z]. 2019.
+[145] Mercer N. The seeds of time: Why classroom dialogue needs a temporal analysis
+[J]. The journal of the learning sciences, 2008, 17(1): 33-59.
+[146] Li Y, Su H, Shen X, et al. Dailydialog: A manually labelled multi-turn dialogue
+dataset[Z]. 2017.
+[147]  Matthews B W. Comparison of the predicted and observed secondary structure of
+139
+--- page 16 ---
+华东师范大学博士学位论文
+t4 phage lysozyme[J]. Biochimica et Biophysica Acta (BBA)-Protein Structure,
+1975, 405(2): 442-451.
+[148] Chicco D, Jurman G. The advantages of the matthews correlation coefficient
+(mcc) over fl score and accuracy in binary classification evaluation[J]. BMC
+genomics, 2020, 21: 1-13.
+[149] Sanh V, Debut L, Chaumond J, et al. Distilbert, a distilled version of bert: smaller,
+faster, cheaper and lighter[Z]. 2020.
+[150] Brown T, Mann B, Ryder N, et al. Language models are few-shot learners[J]
+Advances in neural information processing systems, 2020, 33: 1877-1901.
+[151] Devlin J, Chang M W, Lee K, et al. BERT: Pre-training of deep bidirectional
+transformers for language understanding[C]. Proceedings of the 2019 Conference
+of the North American Chapter of the Association for Computational Linguistics:
+Human Language Technologies, Volume 1 (Long and Short Papers). Minneapo-
+lis, Minnesota: Association for Computational Linguistics, 2019: 4171-4186.
+[152] Vieira C, Parsons P, Byrd V. Visual learning analytics of educational data: A
+systematic literature review and research agenda[J].Computers & Education,
+2018, 122: 119-135.
+[153]  Ehrenfeld N, Horn I S. Initiation-entry-focus-exit and participation: A framework
+for understanding teacher groupwork monitoring routines[J]. Educational Studies
+in Mathematics, 2020, 103(3): 251-272.
+[154] Mohseni Z, Masiello I, Martins R M, et al. Visual learning analytics for edu-
+cational interventions in primary and secondary schools: A scoping review[J]
+Journal of Learning Analytics, 2024, 11(2): 91-111.
+[155]  Asterhan C, Clarke S, Resnick L. Socializing intelligence through academic talk
+and dialogue[J]. Socializing Intelligence Through Academic Talk and Dialogue,
+2015: 1-480.
+[156] Clarke S N, Resnick L B, Rosé C P. Dialogic instruction: A new frontier[M].
+Handbook of educational psychology. Routledge, 2015: 392-403.
+140
+--- page 17 ---
+华东师范大学博士学位论文
+[157] Resnick L B, Michaels S, O’ Connor C. How (well structured) talk builds the
+mind[J]. Innovations in educational psychology: Perspectives on learning, teach-
+ing and human development, 2010, 163: 194.
+[158] Jensen E, L. Pugh S, K. D'Mello S. A deep transfer learning approach to mod-
+eling teacher discourse in the classroom[C]. LAK21: 11th international learning
+analytics and knowledge conference. 2021: 302-312.
+[159] Nicol D J, Macfarlane-Dick D. Formative assessment and self-regulated learning:
+A model and seven principles of good feedback practice[J]. Studies in higher
+education, 2006, 31(2): 199-218.
+[160] Scheeler M C, Ruhl K L, McAfee J K. Providing performance feedback to teach-
+ers: A review[J]. Teacher education and special education, 2004, 27(4): 396-407.
+[161] Shute V J. Focus on formative feedback[J]. Review of educational research,
+2008, 78(1): 153-189.
+[162] Archer J, Cantrell S, Holtzman S L, et al. Better feedback for better teaching:
+2016.
+[163] Ganek H, Eriks-Brophy A. The language ENvironment analysis (LENA) system:
+A literature review[C]. Volodina E, Grigonyte G, Pilan I, et al. Proceedings of
+the joint workshop on NLP for Computer Assisted Language Learning and NLP
+for Language Acquisition. Umea, Sweden: LiU Electronic Press, 2016: 24-32.
+[164] Wang Z, Miller K, Cortina K. Using the lena in teacher training: Promoting
+student involvement through automated feedback[J]. Unterrichtswissenschaft,
+2013, 4.
+[165] D'Mello S K, Olney A M, Blanchard N, et al. Multimodal capture of teacher-
+student interactions for automated dialogic analysis in live classrooms[C]
+Proceedings of the 2015 ACM on international conference on multimodal inter-
+action.2015:557-566.
+141
+--- page 18 ---
+华东师范大学博士学位论文
+142

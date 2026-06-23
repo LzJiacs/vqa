@@ -1,0 +1,13 @@
+[project]
+name = "vqa4090"
+version = "0.1.0"
+description = "Single-GPU (RTX 4090) evidence-grounded VQA baseline"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

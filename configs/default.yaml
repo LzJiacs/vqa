@@ -1,0 +1,6 @@
+﻿retriever_model: BAAI/bge-base-en-v1.5
+reranker_model: BAAI/bge-reranker-base
+vlm_model: Qwen/Qwen2.5-VL-3B-Instruct
+retrieve_top_k: 8
+rerank_top_k: 3
+abstain_threshold: 0.4

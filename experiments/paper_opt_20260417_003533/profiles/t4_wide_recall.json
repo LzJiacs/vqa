@@ -1,0 +1,15 @@
+{
+  "docqa": {
+    "retriever_model": "BAAI/bge-base-en-v1.5",
+    "reranker_model": "BAAI/bge-reranker-base",
+    "vlm_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+    "retriever_epochs": 2,
+    "reranker_epochs": 2,
+    "batch_size": 24,
+    "retrieve_top_k": 24,
+    "rerank_top_k": 10
+  },
+  "chartqa": {
+    "vlm_model": "Qwen/Qwen2.5-VL-3B-Instruct"
+  }
+}

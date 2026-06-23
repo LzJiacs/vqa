@@ -1,0 +1,5 @@
+trial,status,results_root,docqa_vlm_score,docqa_gain,chartqa_vlm_score,chartqa_gain,combined_gain
+t1_base,ok,outputs/project_profile_4090/20260417_003534,0.43,0.43,0.625,0.625,1.055
+t2_deeper_rerank,ok,outputs/project_profile_4090/20260417_011139,0.41,0.41,0.625,0.625,1.035
+t3_large_retriever,ok,outputs/project_profile_4090/20260417_011705,0.29,0.29,0.625,0.625,0.915
+t4_wide_recall,ok,outputs/project_profile_4090/20260417_013337,0.11,0.11,0.625,0.625,0.735
