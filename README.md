@@ -170,19 +170,6 @@ Windows + 4090 环境可直接使用：
 - `outputs/project_profile_4090/20260417_121829/inference_grid_doclocal_supportgate/leaderboard.csv`
 - `outputs/project_profile_4090/20260417_121829/faithfulness_supportgate/faithfulness_summary.csv`
 
-## 更适合面试怎么讲
-
-一句话版本：
-
-> 我做的不是一个“又一个 VQA demo”，而是一套面向真实文档的可验证问答系统：先找证据，再回答，并在证据不够时拒答。
-
-如果要展开，可以按这个顺序讲：
-
-1. 为什么只看 VLM 准确率不够。
-2. 为什么要做检索、重排和证据边界。
-3. 为什么 `doc-local retrieval` 是关键改动。
-4. 为什么 `support gate` 让系统从“会答题”变成“可审计”。
-5. 这套工程怎样被脚本化，能稳定复现实验。
 
 ## 当前边界
 
