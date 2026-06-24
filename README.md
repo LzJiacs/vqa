@@ -37,7 +37,7 @@
 
 ## 关键结果
 
-当前最有代表性的结果来自 `2026-04-17` 的 doc-local retrieval + support gate 实验：
+当前最有代表性的 doc-local retrieval + support gate 实验结果：
 
 | 设置 | DocVQA score | Task acc with abstain | Answerable acc | Unanswerable abstain | Hallucination proxy | Evidence recall@rerank |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
